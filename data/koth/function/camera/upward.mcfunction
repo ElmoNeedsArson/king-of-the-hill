@@ -1,0 +1,1 @@
+execute as @e[type=item_display,tag=camera] at @s run tp @s ~ ~300 ~
