@@ -1,0 +1,1 @@
+function koth:camera/load_cam_animation

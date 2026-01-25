@@ -14,13 +14,5 @@ function koth:beacon-control/detect_claim
 scoreboard players add #tick_counter koth_timer 1
 execute if score #tick_counter koth_timer matches 20.. run function koth:bossbar/countdown
 
-# TODO: Disable chat -> server side
-# TODO: Disable advancements -> server side
-
-# Player Side
-# TODO: Ask everyone to disable lunar mods for positions
-# TODO: Ask everyone to install voicemod
-# TODO: Ask everyone to turn on their volume before starting
-
 # Clears Totems from all players
 clear @a minecraft:totem_of_undying

@@ -5,7 +5,7 @@ clear @a
 # gamerule reducedDebugInfo true
 
 function koth:beacon-spawn/remove
-summon item_display 20.0 110 0.0 {view_range:0f,teleport_duration:20,Tags:["camera","active_cam"],item:{id:"minecraft:air",Count:1b},Rotation:[90.0f,0.0f]}
+summon item_display 20.0 280 0.0 {view_range:0f,teleport_duration:20,Tags:["camera","active_cam"],item:{id:"minecraft:air",Count:1b},Rotation:[90.0f,0.0f]}
 
 # Set all players to spectator mode
 gamemode spectator @a
