@@ -1,6 +1,5 @@
 # Summon ONE camera that will move through all positions
 
-function koth:beacon-spawn/remove
 summon item_display 20.0 80 0.0 {view_range:0f,teleport_duration:20,Tags:["camera","active_cam"],item:{id:"minecraft:stone"},Rotation:[90.0f,0.0f]}
 tp @a @e[type=item_display,tag=active_cam,limit=1]
 # Set all players to spectator mode

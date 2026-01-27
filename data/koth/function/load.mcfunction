@@ -22,7 +22,8 @@ forceload add 2 1
 forceload add 2 -3
 forceload add -4 -3
 
-#TODO fix bug that spectating start animation doesnt work when player is far away
+#TODO adding a player midgame
+#TODO expand reset function to actually work
 
 scoreboard objectives add death deathCount
 scoreboard objectives add respawn custom:time_since_death
