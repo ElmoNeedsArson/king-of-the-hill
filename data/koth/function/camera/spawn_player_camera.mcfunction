@@ -1,5 +1,5 @@
 # Spawn individual camera at player's position looking up
-execute at @s run summon item_display ~ ~1.62 ~ {view_range:0f,teleport_duration:20,Tags:["player_cam"],item:{id:"minecraft:air",Count:1b},Rotation:[0f,-90f]}
+execute at @s run summon item_display ~ ~1.62 ~ {view_range:0f,teleport_duration:20,Tags:["player_cam"],item:{id:"minecraft:stone"},Rotation:[0f,-90f]}
 
 # Tag player to track they have a camera
 tag @s add has_player_cam

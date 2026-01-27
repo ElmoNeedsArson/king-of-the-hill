@@ -1,0 +1,20 @@
+{
+  "name": "king-of-the-hill",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/ElmoNeedsArson/king-of-the-hill#readme",
+  "bugs": {
+    "url": "https://github.com/ElmoNeedsArson/king-of-the-hill/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElmoNeedsArson/king-of-the-hill.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "Bulk_Alter.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

@@ -6,12 +6,12 @@ kill @e[type=minecraft:mannequin,tag=player_mannequin]
 
 # Protect beacon with barrier box around the pyramid (11x11 bedrock base)
 # Four walls around the perimeter
-fill -5 267 -5 -5 272 5 minecraft:barrier
-fill 5 267 -5 5 272 5 minecraft:barrier
-fill -5 267 -5 5 272 -5 minecraft:barrier
-fill -5 267 5 5 272 5 minecraft:barrier
+fill -5 67 -5 -5 72 5 minecraft:barrier
+fill 5 67 -5 5 72 5 minecraft:barrier
+fill -5 67 -5 5 72 -5 minecraft:barrier
+fill -5 67 5 5 72 5 minecraft:barrier
 # Top cover
-fill -5 272 -5 5 272 5 minecraft:barrier
+fill -5 72 -5 5 72 5 minecraft:barrier
 
 # Teleport players to random positions around 10000 block radius circle
 function koth:camera/random_teleport
