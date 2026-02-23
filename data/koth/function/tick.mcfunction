@@ -2,8 +2,7 @@
 execute as @a[gamemode=spectator] at @s run spectate @e[type=item_display,tag=active_cam,limit=1]
 
 # Make players with individual cameras spectate their own camera
-# execute as @a[tag=has_player_cam] at @s run spectate @e[type=item_display,tag=player_cam,limit=1,sort=nearest]
-execute as @a at @s run spectate @e[type=item_display,tag=player_cam,limit=1]
+execute as @a[tag=has_player_cam,gamemode=spectator] at @s run spectate @e[type=item_display,tag=player_cam,limit=1,sort=nearest]
 
 # Check for player deaths and apply penalty
 function koth:death-penalty/check_deaths

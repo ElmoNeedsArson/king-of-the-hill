@@ -4,7 +4,7 @@ kill @e[type=minecraft:item_display,tag=camera]
 weather clear
 time set day
 clear @a
-gamerule keep_inventory true 
+# gamerule keep_inventory true 
 gamerule reduced_debug_info true
 
 # Create scoreboard for camera tracking
@@ -23,7 +23,7 @@ forceload add 2 -3
 forceload add -4 -3
 
 #TODO adding a player midgame
-#TODO expand reset function to actually work
+#TODO expand reset function to actually work - it does ig?
 
 scoreboard objectives add death deathCount
 scoreboard objectives add respawn custom:time_since_death

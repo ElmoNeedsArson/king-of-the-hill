@@ -23,4 +23,4 @@ team remove team_black
 time set day
 clear @a
 
-fill 5 66 -5 -5 73 5 air
+fill 5 116 -5 -5 123 5 air
