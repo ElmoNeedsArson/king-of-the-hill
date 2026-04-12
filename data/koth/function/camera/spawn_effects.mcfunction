@@ -9,5 +9,12 @@ execute as @a[tag=just_landed] at @s run playsound minecraft:entity.ender_dragon
 execute as @a[tag=just_landed] at @s run playsound minecraft:block.end_portal.spawn master @s ~ ~ ~ 1 0.8 1
 execute as @a[tag=just_landed] at @s run playsound minecraft:entity.wither.spawn master @s ~ ~ ~ 0.5 1.8 1
 
+# Reset player's max health to default (40 = 20 hearts) and heal to full
+execute as @a[tag=just_landed] run attribute @s minecraft:max_health base set 40
+execute as @a[tag=just_landed] run effect give @s instant_health 1 10 true
+
+# Update stored health value
+execute as @a[tag=just_landed] run scoreboard players set @s max_health 4000
+
 # Remove tag after effects
 tag @a remove just_landed

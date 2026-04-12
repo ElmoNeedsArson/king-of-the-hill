@@ -9,11 +9,28 @@ const path = require("path");
 const readline = require("readline");
 
 // ---------- CLI ARGUMENTS ----------
-const [, , rootDir, ...mappingArgs] = process.argv;
+let [, , rootDir, ...mappingArgs] = process.argv;
 
-if (!rootDir || mappingArgs.length === 0) {
+// If rootDir looks like a mapping (contains '='), treat it as a mapping and use default directory
+if (rootDir && rootDir.includes("=")) {
+    mappingArgs.unshift(rootDir);
+    rootDir = "./data";
+}
+
+// Default to ./data if no directory provided
+if (!rootDir) {
+    rootDir = "./data";
+}
+
+if (mappingArgs.length === 0) {
     console.error(
-        "Usage: node replace-coords.js <folder> <old=new> [old=new ...]"
+        "Usage: node Bulk_Alter.js [folder] <old=new> [old=new ...]"
+    );
+    console.error(
+        "Example: node Bulk_Alter.js 116=64 117=65 118=66"
+    );
+    console.error(
+        "Example: node Bulk_Alter.js ./data 116=64 117=65 118=66"
     );
     process.exit(1);
 }

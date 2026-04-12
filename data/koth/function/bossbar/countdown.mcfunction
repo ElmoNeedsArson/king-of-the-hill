@@ -27,5 +27,7 @@ bossbar set koth:countdown name ["King of the Hill - ",{"score":{"name":"#hours"
 execute if score #countdown koth_timer matches 1200 if score #warned_20min koth_timer matches 0 run function koth:bossbar/twenty_min_warning
 execute if score #countdown koth_timer matches 1200 run scoreboard players set #warned_20min koth_timer 1
 
+execute if score #warned_20min koth_timer matches 0 run function koth:spawn_protection/tick
+
 # Check if time ran out
 execute if score #countdown koth_timer matches ..0 if score #game_ended koth_timer matches 0 run function koth:bossbar/time_up

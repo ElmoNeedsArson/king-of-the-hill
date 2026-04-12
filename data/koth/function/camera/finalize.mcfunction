@@ -6,12 +6,12 @@ kill @e[type=minecraft:mannequin,tag=player_mannequin]
 
 # Protect beacon with barrier box around the pyramid (11x11 bedrock base)
 # Four walls around the perimeter
-# fill -5 117 -5 -5 122 5 minecraft:barrier
-# fill 5 117 -5 5 122 5 minecraft:barrier
-# fill -5 117 -5 5 122 -5 minecraft:barrier
-# fill -5 117 5 5 122 5 minecraft:barrier
+# fill -5 60 -5 -5 65 5 minecraft:barrier
+# fill 5 60 -5 5 65 5 minecraft:barrier
+# fill -5 60 -5 5 65 -5 minecraft:barrier
+# fill -5 60 5 5 65 5 minecraft:barrier
 # # Top cover
-# fill -5 122 -5 5 122 5 minecraft:barrier
+# fill -5 65 -5 5 65 5 minecraft:barrier
 
 function koth:camera/barrier_protect_beacon
 
