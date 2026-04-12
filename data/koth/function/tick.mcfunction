@@ -51,6 +51,14 @@ execute as @a[team=team_black,scores={glass=1..}] run give @s minecraft:black_st
 
 scoreboard players reset @a[scores={glass=1..}] glass
 
+# Spawn protection: per-tick outward force (active while seal is on)
+# at @s sets Y to player's feet; [x=0,z=0,distance=..40] is then a horizontal cylinder check
+# facing 0 ~ 0 = face toward spawn center; ^ ^ ^-0.5 = step backward = push outward
+execute if score global started matches 1 if score #warned_20min koth_timer matches 0 as @a at @s if entity @s[x=0,z=0,distance=..40,gamemode=survival] facing 0 ~ 0 run tp @s ^ ^ ^-0.5
+
+# Spawn protection: eject players and show boundary while seal is active
+# execute if score #warned_20min koth_timer matches 0 run function koth:spawn_protection/tick
+
 # Death detection
 scoreboard players reset @a death
-execute as @a[scores={respawn=1}] run function koth:death/on_respawn
+execute as @a[tag=koth_needs_respawn] unless entity @s[nbt={Health:0f}] run function koth:death/on_respawn

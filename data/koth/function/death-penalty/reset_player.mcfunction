@@ -1,11 +1,11 @@
-# Reset player's max health to default (20 = 10 hearts)
-attribute @s minecraft:max_health base set 20
+# Reset player's max health to default (40 = 20 hearts)
+attribute @s minecraft:max_health base set 40
 
 # Reset death counter
 scoreboard players set @s deaths 0
 
 # Reset stored health value
-scoreboard players set @s max_health 2000
+scoreboard players set @s max_health 4000
 
 # Notify player
 title @s times 10 40 10

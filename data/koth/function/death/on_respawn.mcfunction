@@ -2,7 +2,8 @@ execute as @s[nbt={Dimension:"minecraft:overworld"}] in minecraft:overworld run 
 execute as @s[nbt={Dimension:"minecraft:the_nether"}] in minecraft:the_nether run function koth:death/nether_respawn
 execute as @s[nbt={Dimension:"minecraft:the_end"}] in minecraft:the_end run function koth:death/overworld_respawn
 
-# Cleanup marker
+# Remove force-load and cleanup marker
+execute at @e[type=minecraft:marker,tag=koth_death_marker,sort=nearest,limit=1] run forceload remove ~ ~
 kill @e[type=minecraft:marker,tag=koth_death_marker,sort=nearest,limit=1]
 
 # Cleanup state
