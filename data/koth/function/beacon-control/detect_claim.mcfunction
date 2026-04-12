@@ -2,7 +2,7 @@
 # Remove any non-glass blocks, only stained glass is allowed
 
 # Make it unable to block the beacon
-fill 0 124 0 0 319 0 air destroy
+fill -5 124 5 5 319 -5 air destroy
 
 execute if block 0 123 0 minecraft:white_stained_glass run function koth:beacon-control/claim_white
 execute if block 0 123 0 minecraft:orange_stained_glass run function koth:beacon-control/claim_orange
