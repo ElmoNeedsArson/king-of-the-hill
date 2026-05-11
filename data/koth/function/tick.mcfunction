@@ -54,7 +54,7 @@ scoreboard players reset @a[scores={glass=1..}] glass
 # Spawn protection: per-tick outward force (active while seal is on)
 # at @s sets Y to player's feet; [x=0,z=0,distance=..40] is then a horizontal cylinder check
 # facing 0 ~ 0 = face toward spawn center; ^ ^ ^-0.5 = step backward = push outward
-execute if score global started matches 1 if score #warned_20min koth_timer matches 0 as @a at @s if entity @s[x=0,z=0,distance=..40,gamemode=survival] facing 0 ~ 0 run tp @s ^ ^ ^-0.5
+execute if score global started matches 1 if score #warned_20min koth_timer matches 0 as @a[nbt={Dimension:"minecraft:overworld"}] at @s if entity @s[x=0,z=0,distance=..40,gamemode=survival] facing 0 ~ 0 run tp @s ^ ^ ^-0.5
 
 # Spawn protection: eject players and show boundary while seal is active
 # execute if score #warned_20min koth_timer matches 0 run function koth:spawn_protection/tick

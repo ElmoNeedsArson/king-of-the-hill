@@ -5,6 +5,9 @@ scoreboard players set #tick_counter koth_timer 0
 # Update sidebar display
 scoreboard players operation Time koth_display = #countdown koth_timer
 
+# Track how long the current beacon holder has controlled the hill
+execute if score global started matches 1 if score #game_ended koth_timer matches 0 run function koth:beacon-control/add_control_time
+
 # Update bossbar value
 execute store result bossbar koth:countdown value run scoreboard players get #countdown koth_timer
 

@@ -1,6 +1,7 @@
 scoreboard players set global started 0
 
 bossbar remove koth:countdown
+scoreboard objectives setdisplay sidebar
 
 team remove bedrock_glow
 team remove team_white

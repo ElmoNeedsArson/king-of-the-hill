@@ -62,3 +62,21 @@ team modify team_red prefix {"text":"[Red] ","color":"red"}
 team add team_black
 team modify team_black color dark_gray
 team modify team_black prefix {"text":"[Black] ","color":"dark_gray"}
+
+# Assign scoreboard entry names to their matching color teams so sidebar entries can inherit team formatting
+team join team_white White_Team
+team join team_orange Orange_Team
+team join team_magenta Magenta_Team
+team join team_light_blue Light_Blue_Team
+team join team_yellow Yellow_Team
+team join team_lime Lime_Team
+team join team_pink Pink_Team
+team join team_gray Gray_Team
+team join team_light_gray Light_Gray_Team
+team join team_cyan Cyan_Team
+team join team_purple Purple_Team
+team join team_blue Blue_Team
+team join team_brown Brown_Team
+team join team_green Green_Team
+team join team_red Red_Team
+team join team_black Black_Team
